@@ -31,7 +31,6 @@ public class Step {
 
     private Util.Status getInternalStatus() {
         if (result == null) {
-            System.out.println("[WARNING] Line " + line + " : " + "Step is missing Result: " + keyword + " : " + name);
             return Util.Status.MISSING;
         } else {
             return Util.resultMap.get(result.getStatus());
