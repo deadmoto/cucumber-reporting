@@ -44,7 +44,7 @@ public class ReportInformationTest {
     @Test
     public void shouldListFeaturesInAMap() {
 	//not really needed now -- have type safety with generics in object usage and would have failed had we not found the resource.
-        assertThat(reportInformation.getProjectFeatureMap().keySet().iterator().next(), StringContains.containsString("net"+File.separator+"masterthought"+File.separator+"cucumber"+File.separator+"project2.json"));
+        assertThat(reportInformation.getProjectFeatureMap().keySet().iterator().next(), StringContains.containsString("net"+File.separator+"masterthought"+File.separator+"cucumber"+File.separator+"project1.json"));
         assertThat(reportInformation.getProjectFeatureMap().entrySet().iterator().next().getValue().get(0), is(Feature.class));
     }
 
@@ -150,7 +150,7 @@ public class ReportInformationTest {
 
     @Test
     public void shouldReturnTotalTagDuration() {
-        assertThat(reportInformation.getTotalTagDuration(), is("340 ms"));
+        assertThat(reportInformation.getTotalTagDuration(), is("338 ms"));
     }
 
     @Test
